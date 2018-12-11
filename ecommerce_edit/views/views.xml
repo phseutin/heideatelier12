@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+   
+    <template id="ecommerce_assets_frontend" inherit_id="website_sale.assets_frontend">
+      
+        <xpath expr="script[last()]" position="after">        
+
+            <script type="text/javascript" src="/ecommerce_edit/static/src/js/website_sale_loc.js"></script>
+            
+
+        </xpath>
+    </template>
+
+
+
+
+
+        
+        <template id="ecommerce_custom_checkout" inherit_id="website_sale.checkout">
+            <xpath expr="//h3[@class='o_page_header mt16 mb4']" position="replace">
+                <h3 class="o_page_header mt16 mb4">
+                </h3>
+            </xpath>
+        </template>
+
+
+
+
+
+        <template id="ecommerce_custom_address" inherit_id="website_sale.address">
+           <xpath expr="//div[@class='form-row']">
+
+                                        <div class="w-100"/>
+                                        <div t-attf-class="form-group #{error.get('location_id') and 'o_has_error'} col-lg-6 div_location">
+                                            <label class="col-form-label" for="location_id">Kies hier je afhaalpunt:</label>
+                                            <select id="location_id" name="location_id" t-attf-class="form-control #{error.get('location_id') and 'is-invalid' }"> 
+                                                
+                                                
+                                                <t t-foreach="main_select" t-as="c">
+                                                    <option t-att-value="c.id" t-att-selected="c.id == (selection and selection.id)">
+                                                        <t t-esc="c.name" />
+                                                    </option>
+                                                </t>
+                                            </select>
+                                        </div>
+                                        <div t-attf-class="form-group #{error.get('date_id') and 'o_has_error' } col-lg-6 div_date">
+                                            <label class="col-form-label" for="date_id">Kies hier je afhaaldatum:</label>
+                                            <select name="date_id" t-attf-class="form-control #{error.get('date_id') and 'is-invalid' }">
+                                                
+                                                <t t-foreach="selection and selection.date_ids" t-as="s">
+                                                    <option t-att-value="s.id"  >
+                                                        <t t-esc="s.name" />
+                                                    </option>
+                                                </t>
+                                            </select>
+                                        </div>
+                                        <div class="w-100"/>
+
+
+                                         <div t-attf-class="form-group #{error.get('reseller_select') and 'has-error' } col-md-6 div_reseller_select">
+                                        <label class="control-label" for="reseller_select">Met mijn aankoop wens ik volgende CHIRO-afdeling te steunen:</label>
+                                        <select id="reseller_select" name="reseller_select" class="form-control">
+
+                                                <option t-att-value="1" t-att-selected="reseller_select == 1">
+                                                    Chiro Heist Centrum
+                                                </option>
+                                                <option t-att-value="2" t-att-selected="reseller_select == 2">
+                                                    Chiro Heist Statie
+                                                </option>
+                                                <option t-att-value="3" t-att-selected="reseller_select == 3">
+                                                    Chiro Hallaar
+                                                </option>
+                                                <option t-att-value="4" t-att-selected="reseller_select == 4">
+                                                    Chiro Putte
+                                                </option>
+                                                <option t-att-value="5" t-att-selected="reseller_select == 5">
+                                                    Chiro Grasheide
+                                                </option>
+
+                                        </select>
+                                    </div>
+
+
+
+
+
+
+
+
+            </xpath>
+        </template>
+
+
+
+
+
+ 
+</odoo>

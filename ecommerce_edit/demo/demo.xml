@@ -1,0 +1,76 @@
+<odoo>
+    <data>
+<record id="location1" model="pickup.locations">
+    <field name="name">HEIDE ATELIER HEIST-OP-DEN-BERG</field>
+    <field name="code">AA</field>
+</record>
+<record id="location2" model="pickup.locations">
+    <field name="name">CHIROLOKALEN GRASHEIDE</field>
+    <field name="code">BB</field>
+</record>
+<record id="location3" model="pickup.locations">
+    <field name="name">CHIROLOKALEN PUTTE</field>
+    <field name="code">CC</field>
+</record>
+<record id="date1" model="pickup.dates">
+    <field name="location_id" ref="location1"/> 
+    <field name="name">Wed 19/12 – 12:00 to 19:00</field>
+</record>
+<record id="date2" model="pickup.dates">
+    <field name="location_id" ref="location1"/> 
+    <field name="name">Thu 20/12 - 12:00 to 19:00</field>
+</record>
+<record id="date3" model="pickup.dates">
+    <field name="location_id" ref="location1"/> 
+    <field name="name">Fri 21/12 - 12:00 to 19:00</field>
+</record>
+<record id="date4" model="pickup.dates">
+    <field name="location_id" ref="location1"/> 
+    <field name="name">Sat 22/12 - 12:00 to 19:00</field>
+</record>
+<record id="date5" model="pickup.dates">
+    <field name="location_id" ref="location1"/> 
+    <field name="name">Sun 23/12 - 12:00 to 19:00</field>
+</record>
+<record id="date6" model="pickup.dates">
+    <field name="location_id" ref="location1"/> 
+    <field name="name">Mon 24/12 - 12:00 to 19:00</field>
+</record>
+<record id="date7" model="pickup.dates">
+    <field name="location_id" ref="location1"/> 
+    <field name="name">Tue 25/12 - 10:00 to 14:00</field>
+</record>
+<record id="date8" model="pickup.dates">
+    <field name="location_id" ref="location1"/> 
+    <field name="name">Wed 26/12 - 10:00 to 14:00</field>
+</record>
+<record id="date9" model="pickup.dates">
+    <field name="location_id" ref="location1"/> 
+    <field name="name">Thu 27/12 - 12:00 to 19:00</field>
+</record>
+<record id="date10" model="pickup.dates">
+    <field name="location_id" ref="location1"/> 
+    <field name="name">Fri 28/12 - 12:00 to 19:00</field>
+</record>
+<record id="date11" model="pickup.dates">
+    <field name="location_id" ref="location1"/> 
+    <field name="name">Sat 29/12 - 12:00 to 19:00</field>
+</record>
+<record id="date12" model="pickup.dates">
+    <field name="location_id" ref="location1"/> 
+    <field name="name">Sun 30/12 - 12:00 to 19:00</field>
+</record>
+<record id="date13" model="pickup.dates">
+    <field name="location_id" ref="location1"/> 
+    <field name="name">Mon 31/12 - 10:00 to 14:00</field>
+</record>
+<record id="date14" model="pickup.dates">
+    <field name="location_id" ref="location2"/> 
+    <field name="name">Fri 21/12 – 14:00 to 19:00</field>
+</record>
+<record id="date15" model="pickup.dates">
+    <field name="location_id" ref="location3"/> 
+    <field name="name">Sat 22/12 – 14:00 to 19:00</field>
+</record>
+</data>
+</odoo>

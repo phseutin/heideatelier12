@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_pickup_locations,access_pickup_locations,model_pickup_locations,,1,1,1,0
+access_pickup_dates,access_pickup_dates,model_pickup_dates,,1,1,1,0 

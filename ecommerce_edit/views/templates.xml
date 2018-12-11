@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+ <data>
+
+  <record id="ecommerce_sale_order_view" model="ir.ui.view">
+      <field name="model">sale.order</field>
+      <field name="inherit_id" ref="sale.view_order_form"/>
+      <field name="arch" type="xml">
+         <field name="partner_shipping_id" position="after">              
+           <field name="x_location_id"/>
+           <field name="x_date_id"/>
+           <field name="x_reseller_name"/>
+           
+         </field>
+            
+      </field>
+  </record>
+
+
+
+
+
+
+<!--action view-->
+    <act_window
+      id="location_action"
+      name="Locations"
+      res_model="pickup.locations"
+      view_mode="kanban,tree,form"    
+
+    />
+
+
+   <!--Menu View-->
+    <menuitem
+      id="location_menu"
+      name="locations"
+      action="location_action"
+      parent=""
+      sequence="5"
+
+    />
+
+ </data>
+</odoo>
